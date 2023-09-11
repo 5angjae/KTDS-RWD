@@ -1,1 +1,11 @@
-/* index.css */
+@import url("normalize.css");
+@import url("base.css");
+@import url("theme.css");
+@import url("style.css");
+/* 이렇게 묶어둔 파일을 엔트리 파일이라 함 */
+
+/* 아래처럼 엔트리파일에 코드를 추가하는건 권장하진 않음 */
+.appHeader {
+    background-color: var(--primary-color);
+    color: var(--white);
+}

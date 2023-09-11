@@ -1,0 +1,71 @@
+.container {
+    display: flex; /* block 모델에서 flex 모델로 변경 - 직계 자식 영역의 배치에 영향 */
+    flex-direction: column;
+    min-height: 100vh; /*viewport height의 약자 (화면의 크기만큼) viewport 의 크기만큼 만들 수 있음*/
+}
+
+.appHeader {
+    height: 100px;
+}
+
+.appNavigation {
+    background-color: yellow;
+    height: 100px;
+}
+
+.appMain {
+    background-color: pink;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row; /*생략해도 기본값*/
+    flex-wrap: wrap; /* default는 nowrap */
+    /*flex-flow: row wrap; */ /* 위 두줄을 하나로 줄이면 */
+}
+
+.book, .news, .board, .favorite, .twitter {
+    width: 100%;
+}
+
+.appFooter {
+    background-color: lime;
+    height: 100px;
+}
+
+/*미디어 쿼리*/
+@media (min-width: 768px) {
+    .bookWrapper {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .book {
+        background-color: skyblue;
+        width: 30%;
+    }
+
+    .boardWrapper {
+        background-color: gray;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .board {
+        background-color: tomato;
+        order: 1;
+    }
+
+    .favoriteWrapper {
+        background-color: teal;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .twitter {
+        background-color: white;
+        order: -1;
+    }
+
+
+}

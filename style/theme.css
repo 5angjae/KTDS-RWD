@@ -13,6 +13,7 @@
   --brown: #988574;
   --blue: #6aaee6;
 
+  /* 변수 설정으로 일관성있는 ui 작업이 가능해짐 */
   --primary-color: var(--dark-brown);
   --secondary-color: var(--light-brown);
   --accent-color: var(--light-yellow);
