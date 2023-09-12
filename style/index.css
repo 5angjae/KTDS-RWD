@@ -25,6 +25,10 @@
 	border-width: 0;
 }
 
+.container {
+	min-width: 16.25rem;
+}
+
 /* 헤더 */
 .appHeader {
     background-color: var(--primary-color);
@@ -73,7 +77,7 @@ legend {
 
 
 /* 멤버 서비스 */
-memberOnly {
+.memberOnly {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
@@ -83,4 +87,26 @@ memberOnly {
 /* 검색 폼 */
 .searchForm {
 	width: 100%;
+}
+
+.searchForm__group {
+	display: flex;
+	gap: var(--spacing-sm);
+}
+
+.formInput {
+	background-color: yellow;
+	flex-grow: 1;
+
+	/* &__input {
+		width: 100%;
+	} */
+}
+
+.formInput__input {
+	width: 100%;
+}
+
+.searchForm .button {
+	white-space: nowrap;
 }
