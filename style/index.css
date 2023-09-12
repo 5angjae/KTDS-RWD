@@ -1,11 +1,86 @@
 @import url("normalize.css");
 @import url("base.css");
 @import url("theme.css");
-@import url("style.css");
+/* @import url("style.css"); */
 /* 이렇게 묶어둔 파일을 엔트리 파일이라 함 */
 
 /* 아래처럼 엔트리파일에 코드를 추가하는건 권장하진 않음 */
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/*숨김콘텐츠*/
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+/* 헤더 */
 .appHeader {
     background-color: var(--primary-color);
     color: var(--white);
+		display: flex;
+		flex-flow: row wrap;
+		padding: var(--spacing-base) var(--spacing-lg);
+}
+
+/* 로고 */
+.logo {
+	width: 100%;
+}
+
+.logo__link {
+		display: block;
+    width: 12.25rem;
+    height: 3.75rem;
+    background-image: url(../images/webcafe-logo@2x.png);
+    background-size: cover;
+}
+
+/* 멤버 서비스 */
+.memberOnly {
+	display: flex;
+	flex-direction: row;
+}
+
+legend {
+	/*아래 display none 등으로 처리하면 단순히 안보이는게 아니라, 아예 존재하지 않는 것으로 됨. 따라서 screen reader 사용자에게는 없는 것으로 되는 등 탐색이 안됨*/
+	/*display: none;*/
+	/*fontsize: 0*/
+	/*opacity: 0*/
+
+
+	/* position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0; */
+}
+
+
+/* 멤버 서비스 */
+memberOnly {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	order:-1;
+}
+
+/* 검색 폼 */
+.searchForm {
+	width: 100%;
 }
